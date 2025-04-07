@@ -1,0 +1,21 @@
+.employee-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .employee-row {
+    display: flex;
+    flex: 1 0 45%;
+    margin-bottom: 10px;
+  }
+  
+  .employee-label {
+    font-weight: bold;
+    width: 40%;
+  }
+  
+  .employee-value {
+    width: 60%;
+  }
+  

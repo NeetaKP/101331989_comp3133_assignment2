@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+    <h1 class="text-center">
+        {{isUpdate ? "Update" : "Add"}} Employee
+    </h1>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="border rounded p-5  w-70">
+            <div id="liveAlertPlaceholder"></div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label htmlFor="first_name" class="form-label">
+                        <strong>First Name</strong>
+                    </label>
+                    <input type="text" class="form-control" name="first_name" id="first_name" required="true" value=""
+                        formControlName="first_name" placeholder="Enter your first name here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="last_name" class="form-label">
+                    <strong>Last Name</strong>
+                    </label>
+                    <input type="text" class="form-control" name="last_name" id="last_name" required=true value=""
+                        formControlName="last_name" placeholder="Enter your last name here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="email" class="form-label">
+                    <strong>Email</strong>
+                    </label>
+                    <input type="email" class="form-control" name="email" id="email" required="true"
+                        formControlName="email" placeholder="Enter your email address here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="gender" class="form-label">
+                        <strong>Gender</strong>
+                    </label>
+                    <select class="form-select" name="gender" aria-label="Default select example" required="true"
+                        formControlName="gender">
+                        <option selected disabled value="">
+                            Choose gender
+                        </option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="designation" class="form-label">
+                        <strong>Designation</strong>
+                    </label>
+                    <input type="text" class="form-control" name="designation" id="designation" required="true"
+                        formControlName="designation" placeholder="Enter your designation here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="salary" class="form-label">
+                        <strong>Salary</strong>
+                    </label>
+                    <input type="number" class="form-control" name="salary" id="salary" formControlName="salary"
+                        required="true" step="any" placeholder="Enter your annual salary here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="data_of_joining" class="form-label">
+                        <strong>Date of joining</strong>
+                    </label>
+                    <input type="date" class="form-control" name="date_of_joining" id="date_of_joining" formControlName="date_of_joining"
+                        step="any" placeholder="Enter your date of joining here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="department" class="form-label">
+                        <strong>Department</strong>
+                    </label>
+                    <input type="text" class="form-control" name="department" id="department" formControlName="department"
+                        step="any" placeholder="Enter your department here..." />
+                </div>
+                <div class="mb-3">
+                    <label htmlFor="employee_photo" class="form-label">
+                    <strong>Employee photo</strong>
+                    </label>
+                    <input type="file" class="form-control" name="employee_photo" id="employee_photo" formControlName="employee_photo"
+                        step="any" placeholder="Enter your photo address here..." accept="image/*" />
+                </div>
+                <div class="d-flex align-items-center justify-content-around mt-4">
+                    <button type="submit" class="btn btn-success">
+                        Save
+                    </button>
+                    <a class="btn btn-danger" [routerLink]="['/']" routerLinkActive="router-link-active">
+                        Cancel
+                    </a>
+                    <button type="reset" class="btn btn-info me-2">
+                        Clear form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

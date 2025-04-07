@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+    <h1 class="text-center">Employee Details</h1>
+    <div class="d-flex justify-content-center align-items-center mt-4">
+        <div class="border rounded p-4  w-80">
+            
+           <div class="employee-details">
+                <div class="employee-row">
+                  <div class="employee-label">Id</div>
+                  <div class="employee-value">{{employee.id}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">First Name</div>
+                  <div class="employee-value">{{employee.first_name}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Last Name</div>
+                  <div class="employee-value">{{employee.last_name}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Email</div>
+                  <div class="employee-value">{{employee.email}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Gender</div>
+                  <div class="employee-value">{{employee.gender}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Designation</div>
+                  <div class="employee-value">{{employee.designation}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Salary</div>
+                  <div class="employee-value">$ {{employee.salary}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Date of Joining</div>
+                  <div class="employee-value">{{date_of_joining}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Department</div>
+                  <div class="employee-value">{{employee.department}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Photo</div>
+                  <div class="employee-value">{{employee.employee_photo}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Created at</div>
+                  <div class="employee-value">{{employee.created_at}}</div>
+                </div>
+                <div class="employee-row">
+                  <div class="employee-label">Updated at</div>
+                  <div class="employee-value">{{employee.updated_at}}</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center justify-content-space-between mt-4">
+                <a
+                    class="btn btn-info me-3"
+                    [routerLink]="['/edit', employee.id]"
+                    routerLinkActive="router-link-active"
+                >
+                    Update
+                </a>
+                <a class="btn btn-warning" [routerLink]="['/']" routerLinkActive="router-link-active" >
+                    Cancel
+                </a>
+            </div>
+                  
+        </div>
+
+    </div>
+</div>

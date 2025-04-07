@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh ; background-size: cover; ">
+    <div class="border rounded bg-light p-4 w-50">
+        <h2 class="text-center mb-5">SignUp</h2>
+        <div id="liveAlertPlaceholder"></div>
+
+        <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()"
+            >
+            <div class="input-group has-validation mb-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="username" placeholder="Username" required
+                    formControlName="username" />
+                    <label for="username">Enter your username</label>
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your username.
+                </div>
+            </div>
+            <div class="input-group has-validation mb-4">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required
+                    formControlName="password" />
+                    <label for="username">Enter your password</label>
+                </div>
+                <div class="invalid-feedback">
+                    Please enter correct password.
+                </div>
+            </div>
+            <div class="input-group has-validation mb-4">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required
+                    formControlName="email" />
+                    <label for="email">Enter your email</label>
+                </div>
+                <div class="invalid-feedback">
+                    Please enter valid email.
+                </div>
+            </div>
+            <div class="mt-4 mb-4">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    Sign Up
+                </button>
+            </div>
+            <p class="text-center">
+                Already have an account ?
+                <a class="text-decoration-none" [routerLink]="['/login']" routerLinkActive="router-link-active">
+                Login here
+                </a>
+            </p>
+        </form>
+    </div>
+</div>
